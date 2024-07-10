@@ -1,0 +1,659 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,400;1,500;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* Global variables */
+:root{
+    --sideBGcolor: #040b14;
+    --themecolor: #00A78E;
+    --iconBGcolor: #2C2F3F;
+    --textcolor: #525252;
+    --bgcolor: #F7F7F7;
+
+}
+
+/*HEARDER START*/
+header{
+    height: 100vh;
+    width: 300px;
+    padding: 15px 30px;
+    background-color: #c1c1ea;
+    color: rgb(10, 10, 10);
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: 0.4s;
+    z-index: 99;
+}
+header .profile{
+    text-align: center;
+    margin: 10px 0;
+}
+header .profile img{
+    width: 150px;
+    border-radius: 50%;
+    
+}
+header .profile h1{
+    color: rgb(11, 11, 11);
+    font-weight: 400;
+}
+.social-icons a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 37px;
+    background-color: var(--iconBGcolor);
+    color: white;
+    font-size: 18px;
+    margin: 1.5px;
+    transition: 0.4s;
+    margin-top: 10pxss;
+}
+.social-icons a:hover
+{
+    background-color: pink;
+}
+
+header nav ul li{
+    list-style:none;
+}
+
+header nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 10px;
+    margin: 7px;
+    color: rgb(21, 20, 20);
+    font-weight: 400px;
+    letter-spacing: 0.6px;
+    width: 250px;
+}
+header nav ul li a i{
+    margin-right: 10px;
+    font-size: 20px;
+    transition: 0.4s;
+}
+header nav ul li a:hover{
+    
+    background-color: #898686;
+
+}
+header nav ul li a:hover i,
+header nav ul li .active i
+{
+    color: rgb(165, 128, 233);
+    
+}
+header .footer{
+    text-align: center;
+    width: 300px;
+    color: rgb(36, 36, 36);
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    padding: 15px;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+
+}
+header .footer p a{
+    color: var(--themecolor);
+}
+main{
+    margin-left: 300px;
+    background-color:var(--bgcolor);
+    transition: 0.3s;
+
+}
+#home{
+    height: 100vh;
+    width: 100%;
+    background-color:white;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    position: relative; 
+}
+#home::before{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.448);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#home .home-row{
+    z-index: 1;
+}
+#home .home-row h1{
+    font-size: 60px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    line-height: 70px;
+}
+#home .home-row h1 span{
+    color: #373739;
+}
+
+#about p span{
+    border-bottom: 4px solid var(--themecolor);
+}
+#about{
+    padding: 70px 30px;
+}
+.sub-heading{
+    color: black;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.divider{
+    width: 80px;
+    height: 4px;
+    background-color: var(--themecolor);
+    border-radius: 3px;
+    position: relative;
+    right: 165px;
+    top: 50px;
+
+  
+}
+
+#about {
+    display: flex;
+    gap: 40px;
+    margin-top: 25px;
+    margin-left: 40px;
+    height: 100vh;
+    
+}
+
+
+#about  .info-col h1{
+    color: var(--themecolor);
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+
+#about  .info-col .icon-list-col{
+    display: flex;
+    gap: 150px;
+    margin-top: 90px;
+    margin-left: -300px;
+
+    
+}
+#about  .info-col .icon-list-col ul li{
+    list-style: none;
+    margin-bottom: 20px;
+    font-size: larger;
+   
+}
+.t1{
+    
+    position:absolute;
+    bottom: -700px;
+    right: 100px;
+    margin-left: 300px;
+   
+}
+#about  .info-col .icon-list-col ul li i{
+    color: var(--themecolor);
+}
+strong{
+    color: var(--sideBGcolor);
+    font-weight: 600;
+    margin-right:2px ;
+}
+.icon-list-col .icon-list ul li span{
+    color: var(--textcolor);
+    font-weight: 400px;
+}
+.hr1{
+    margin-left: 10px;
+    height: 4px;
+    background-color: #1e095e;
+    outline: black;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-top: 10px;
+
+}
+#skills{
+    gap: 90px;
+    height: 100vh;
+    
+  
+}
+#skills .divider{
+    margin-top:40px ;
+    width: 72px;
+    margin-left: 0px;
+
+}
+#skills .sub-heading{
+    margin-top: 50px;
+    margin-left: 60px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+
+.text{
+    width: 70%;
+    margin-left:  4rem ;
+}
+
+
+
+.header-skill-head{
+    width: 100%;
+    margin-bottom: 50px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 100px;
+    grid-row-gap: 35px;
+    margin-left: 350px;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+}
+.bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(193, 191, 191);
+    border-radius: 25px;
+    margin-top: 15px;
+    position: relative;
+}
+
+
+
+.bar span .html{
+    width: 90%;
+    height: 100%;
+    background-color: #00A78E;
+    position: absolute;
+}
+
+
+.bar span .css{
+    width: 88%;
+    height: 100%;
+    background-color: #00A78E;
+    position: absolute;
+}
+
+
+.bar span .js{
+    width: 65%;
+    height: 100%;
+    background-color: #00A78E;
+    position: absolute;
+}
+
+
+
+.bar span .java{
+    width: 85%;
+    height: 100%;
+    background-color: #00A78E;
+    position: absolute;
+}
+
+.bar span .python{
+    width: 83%;
+    height: 100%;
+    background-color: #00A78E;
+    position: absolute;
+}
+.bar span .c{
+    width: 80%;
+    height: 100%;
+    background-color: #00A78E;
+    position: absolute;
+}
+.bar span .ds{
+    width: 70%;
+    height: 100%;
+    background-color: #00A78E;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+#projects{
+    height: 100vh;
+}
+
+#cour-head-2{
+    text-align: center;
+    color: rgb(113, 139, 219);
+    font-size: 30px;
+    margin-top: 30px;
+
+}
+#courses-2 .box{
+
+    border: 1px solid rgb(238, 235, 235);
+    width: 200px;
+    text-align: center;
+    padding: 24px 15px;
+    border-radius: 6px;
+    justify-content: space-between;
+    margin-right: 90px;
+   
+    
+}
+#courses-2{
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    margin-left: 150px;
+    margin-right: 70px;
+    
+    
+}
+#courses-2 .box:hover{
+   
+    background-color: rgb(231, 230, 230);
+
+}
+.box img:hover{
+    transform: scale(1.15);
+    transition-duration: 1.5s;
+}
+#hr1{
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: black;
+}
+h4{
+
+}
+.mat{
+    font-size: 50px;
+}
+
+
+
+
+
+        </style>
+<body>
+    
+   
+
+    <header>
+        <div class="profile">
+             <img src="img/img2.jpg" alt="full pic" width="140px" height="140px">
+             <h1>Jogi Karthik</h1>
+             <hr class="hr1">
+           
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i> About Me</a></li>
+                <li><a href="#skills"><i class="fa-sharp fa-regular fa-percent"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-laptop-code"></i> projects</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer">
+           <hr class="hr1">
+            <p>&copy; Copyright 2023 <br>Developed By <a href="#"> Jogi Karthik</a></p>
+            <div class="social-icons">
+                <a href="#" ><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+
+        <section id="home">
+            <div class="home-row">
+                <h1>Hello.. ! This is <br>Karthik Jogi <span>.</span> </h1>
+                
+            </div>
+        </section>
+
+        <section id="about">
+            <h1 class="sub-heading">About Me</h1>
+            <div class="divider"> </div>
+            
+           
+           
+            <div class="info-col">
+               
+                <div class="icon-list-col">
+                    <div class="icon-list">
+                        <ul>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Birthday :</strong> <span>28</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Website :</strong> <span>www.karthik.com</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Phone :</strong> <span>9553627999</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  City :</strong> <span>Bhimavaram</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Father :</strong> <span>J.Prasad</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Address :</strong> <span>Sanjana Developers</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Pincode :</strong> <span>534202</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  course :</strong> <span>2021-2025</span></li>
+                           
+
+                        </ul>
+                    </div>
+
+                    <div class="icon-list">
+                        <ul>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Age :</strong> <span>18</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Degree :</strong> <span>B.Tech</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Email :</strong> <span><a href="jogikarthik123@gmail.com">click here</a></span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Freelance :</strong> <span>Available</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Schooling :</strong> <span>2019</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Intermediate :</strong> <span>2019-2021</span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Github :</strong> <span><a href="jogikarthik123@gmail.com">click here</a></span></li>
+                            <li><i class="fa-sharp fa-solid fa-caret-right"></i><strong>  Hackerrank :</strong> <a href="jogikarthik123@gmail.com">click here</a></span></li>
+                            
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="t1"> <p  class="text1 text">Lorem ipsum dolor , sit amet consectetur adipisicing elit, quod ab laudantium
+                Lorem ipsum dolor , sit amet consectetur adipisicing elit, quod ab laudantium
+                Lorem ipsum dolor , sit amet consectetur adipisicing elit, quod ab laudantium
+                Lorem ipsum dolor , 
+            </p></div>
+            <p>I am <span class=".auto-input">Karthik </span></p>
+           
+        </section>
+        <hr id="hr1">
+
+
+        <section id="skills" >
+            <h1 class="sub-heading">Skills </h1>
+            <div class="divider"> </div>
+            <p  class="text">Lorem ipsum dolor , sit amet consectetur adipisicing elit, quod ab laudantium
+                Lorem ipsum dolor , sit amet consectetur adipisicing elit, quod ab laudantium
+                Lorem ipsum dolor , sit amet consectetur adipisicing elit, quod ab laudantium
+                Lorem ipsum dolor , 
+            </p>
+             <div class="header-skill-head">
+                <h2>My <span>Skills</span></h2>
+                <p>Here is my skills to represent my Expertise</p>
+             </div>
+
+             <div class="skill-main">
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>Html</p>
+                        <p>90%</p>
+                    </div>
+                    <div class="bar">
+                        <span><span class="html"></span></span>
+                    </div>
+                </div>
+             </div>
+
+             <div class="skill-main">
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>CSS</p>
+                        <p >87%</p>
+                    </div>
+                    <div class="bar">
+                        <span><span class="css"></span></span>
+                    </div>
+                </div>
+             </div>
+
+             <div class="skill-main">
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>Java Script</p>
+                        <p>55%</p>
+                    </div>
+                    <div class="bar">
+                        <span><span class="js"></span></span>
+                    </div>
+                </div>
+             </div>
+
+             <div class="skill-main">
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>Java</p>
+                        <p>85%</p>
+                    </div>
+                    <div class="bar">
+                        <span><span class="java"></span></span>
+                    </div>
+                </div>
+             </div>
+
+             <div class="skill-main">
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>Python</p>
+                        <p>80%</p>
+                    </div>
+                    <div class="bar">
+                        <span><span class="python"></span></span>
+                    </div>
+                </div>
+             </div>
+
+             <div class="skill-main">
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>C language</p>
+                        <p>80%</p>
+                    </div>
+                    <div class="bar">
+                        <span><span class="c"></span></span>
+                    </div>
+                </div>
+             </div>
+             <div class="skill-main">
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>Data Structures</p>
+                        <p>60%</p>
+                    </div>
+                    <div class="bar">
+                        <span><span class="ds"></span></span>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+
+
+
+        <section id="projects" >
+            
+<hr id="hr1">
+<div id="sec-pro">
+    <h1 id="cour-head-2">Course Projects</h1> 
+   
+    <section id="courses-2" class="sec-p1">
+        <div class="box" >
+            <img src="img/p1p.webp" width="230px" alt="no" >
+            <h4>C</h4>
+        </div>
+        <div class="box">
+            <img src="img/p1tic.webp" width="190px" alt="no" >
+            <h4>Python</h4>
+        </div>
+        <div class="box">
+            <img src="img/p1j.jpg" width="250" alt="no" >
+            <h4>Java</h4>     
+        </div>
+
+        <div class="box">
+            <img src="img/p1h.jpg" width="250" alt="no" >
+            <h4>Html</h4>        
+        </div>
+        <div class="box">
+            <img src="img/p1cs.jpg" width="250px" alt="no" >
+            <h4>CSS</h4></div>
+        <div class="box">
+            <img src="img/p1cal.jpg" width="260px" height="" alt="no" >
+            <h4>Java Script</h4>
+        </div>
+        <div class="box">
+            <img src="img/p1d.jpg" width="250" alt="no" >
+            <h4>SQL</h4></section>
+        </div>
+    <div>.</div>
+</div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="portfolio.js"></script>
+    <script src="https://kit.fontawesome.com/bd154d3f66.js" crossorigin="anonymous"></script>
+
+</body>
+    </head>
+</html>
